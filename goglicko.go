@@ -25,10 +25,10 @@
 // Determine the new value, sigma', of the volatility, in an iterative process.
 //
 // Step 6:
-// Update the rating deviation to the new pre-rating period value, φ_z
+// Update the rating deviation to the new pre-rating period value, ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ_z
 //
 // Step 7:
-// Update the rating and RD to the new values, μ′ and φ′:
+// Update the rating and RD to the new values, ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ² and ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ²:
 //
 // Step 8:
 // Convert back to the Glicko1 scale.
@@ -39,8 +39,7 @@ import (
 	"math"
 )
 
-// Overrideable Defaults
-var (
+const (
 	// Constrains the volatility. Typically set between 0.3 and 1.2.  Often
 	// refered to as the 'system' constant.
 	DefaultTau = 0.3
@@ -52,7 +51,7 @@ var (
 
 // Miscellaneous Mathematical constants.
 const (
-	piSq = math.Pi * math.Pi // π^2
+	piSq = math.Pi * math.Pi // ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ^2
 	// Constant transformation value, to transform between Glicko 2 and Glicko 1
 	glicko2Scale = 173.7178
 )
@@ -80,7 +79,7 @@ func sq(x float64) float64 {
 	return x * x
 }
 
-// The E function. Written as E(μ,μ_j,φ_j).
+// The E function. Written as E(ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼,ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼_j,ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ_j).
 // For readability, instead of greek we use the variables
 // 	r: rating of player
 // 	ri: rating of opponent
@@ -89,7 +88,7 @@ func ee(r, ri, devi float64) float64 {
 	return 1.0 / (1 + math.Exp(-gee(devi)*(r-ri)))
 }
 
-// The g function. Written as g(φ).
+// The g function. Written as g(ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ).
 // For readability, instead of greek we use the variables
 // 	dev: The deviation of a player's rating
 func gee(dev float64) float64 {
@@ -120,12 +119,13 @@ func estImprovePartial(gees, ees []float64, r []Result) float64 {
 }
 
 // Calculate the new volatility for a Player.
-func newVolatility(estVar, estImp float64, p *Rating) float64 {
+func (p *Rating) newVolatility(estVar, estImp float64) float64 {
 	epsilon := 0.000001
-	a := math.Log(sq(p.Volatility))
+	a := math.Log(sq(p.volatility))
 	deltaSq := sq(estImp)
-	phiSq := sq(p.Deviation)
-	tauSq := sq(DefaultTau)
+	phiSq := sq(p.deviation)
+	tau := p.system.tau
+	tauSq := sq(tau)
 	maxIter := 100
 
 	f := func(x float64) float64 {
@@ -142,9 +142,9 @@ func newVolatility(estVar, estImp float64, p *Rating) float64 {
 		val := -1.0
 		k := 1
 		for ; val < 0; k++ {
-			val = f(a - float64(k)*DefaultTau)
+			val = f(a - float64(k)*tau)
 		}
-		B = a - float64(k)*DefaultTau
+		B = a - float64(k)*tau
 	}
 	// Now: A < ln(sigma'^2) < B
 
@@ -185,33 +185,97 @@ func newRatingVal(oldRating, newDev, estImpPart float64) float64 {
 	return oldRating + newDev*newDev*estImpPart
 }
 
-func CalculateRating(player *Rating, opponents []*Rating, res []Result) (*Rating, error) {
+// Update re-calculates the values of Rating from the results of a match
+func (player *Rating) Update(opponents []*Rating, res []Result) error {
 	if len(opponents) != len(res) {
-		return nil, fmt.Errorf("Number of opponents must == number of results. %v != %v",
+		return fmt.Errorf("Number of opponents must == number of results. %v != %v",
 			len(opponents), len(res))
 	}
 
-	p2 := player.ToGlicko2()
+	p2 := player.toGlicko2()
 	gees := make([]float64, len(opponents))
 	ees := make([]float64, len(opponents))
 	for i := range opponents {
-		o := opponents[i].ToGlicko2()
-		gees[i] = gee(o.Deviation)
-		ees[i] = ee(p2.Rating, o.Rating, o.Deviation)
+		o := opponents[i].toGlicko2()
+		gees[i] = gee(o.deviation)
+		ees[i] = ee(p2.rating, o.rating, o.deviation)
 	}
 
 	estVar := estVariance(gees, ees)
 	estImpPart := estImprovePartial(gees, ees, res)
 	estImp := estVar * estImpPart
-	newVol := newVolatility(estVar, estImp, p2)
-	newDev := newDeviation(p2.Deviation, newVol, estVar)
-	newRating := newRatingVal(p2.Rating, newDev, estImpPart)
-	rt := NewRating(newRating, newDev, newVol).FromGlicko2()
+
+	newVol := p2.newVolatility(estVar, estImp)
+	newDev := newDeviation(p2.deviation, newVol, estVar)
+	newRating := newRatingVal(p2.rating, newDev, estImpPart)
+
+	p2.rating = newRating
+	p2.deviation = newDev
+	p2.volatility = newVol
+	p2 = p2.fromGlicko2()
+
+	player.rating = p2.rating
+	player.deviation = p2.deviation
+	player.volatility = p2.volatility
 
 	// Upper bound by the Default Deviation.
-	if rt.Deviation > DefaultDev { 
-		rt.Deviation = DefaultDev
+	if player.deviation > player.system.baseDeviation {
+		player.deviation = player.system.baseDeviation
 	}
 
-	return rt, nil
+	return nil
+}
+
+// playersExcept returns a new slice containing all the players except the one at the specified
+// index
+func playersExcept(index int, players []*Rating) []*Rating {
+	psLen := len(players) - 1
+	if psLen <= 0 {
+		return []*Rating{}
+	}
+
+	ps := make([]*Rating, 0, psLen)
+	for i := range players {
+		if i == index {
+			continue
+		}
+
+		ps = append(ps, players[i])
+	}
+
+	return ps
+}
+
+// resultsExcept returns a new slice containing all the results except the one at the specifed index
+func resultsExcept(index int, results []Result) []Result {
+	rsLen := len(results) - 1
+	if rsLen <= 0 {
+		return []Result{}
+	}
+
+	rs := make([]Result, 0, rsLen)
+	for i := range results {
+		if i == index {
+			continue
+		}
+
+		rs = append(rs, results[i])
+	}
+
+	return rs
+}
+
+// Update re-calculates the rating for the results of a match for all players involved
+func Update(players []*Rating, results []Result) error {
+	for index, player := range players {
+		ps := playersExcept(index, players)
+		rs := resultsExcept(index, results)
+		err := player.Update(ps, rs)
+
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
